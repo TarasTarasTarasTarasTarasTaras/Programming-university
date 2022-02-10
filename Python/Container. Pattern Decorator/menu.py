@@ -1,3 +1,4 @@
+import json
 from Validation import ExceptionPayment
 from Payment_Request import PAYMENT_REQUEST
 from Container_PaymentRequest import ContainerPAYMENT_REQUEST
@@ -11,9 +12,7 @@ def menu():
                      + "   4. Delete payment from container by ID\n"
                      + "   5. Add payment to container by keyboard\n"
                      + "   6. Edit attribute of payment by ID\n"
-                     + "   7. Undo last change\n"
-                     + "   8. Redo last change\n"
-                     + "   9. Exit\n"
+                     + "   7. Exit\n"
                      + " ==========================================\n")
     return action
 
@@ -33,13 +32,13 @@ def main():
             continue
  
 
-    dictionaryActions = {"1" : print_container, "2" : search_in_container, "3" : sort_container, "4" : delete_from_container, 
-                         "5" : add_to_container, "6" : edit_attribute_container, "7" : _undo, "8" : _redo}
+    dictionaryActions = {"1" : print_container, "2" : search_in_container, "3" : sort_container, 
+                         "4" : delete_from_container, "5" : add_to_container, "6" : edit_attribute_container}
 
     while True:
         try:
             action = menu()
-            if action == "9": break
+            if action == "7": break
             else:
                 dictionaryActions[action](container)            
         except KeyError:
@@ -106,14 +105,6 @@ def edit_attribute_container(container):
                  "  7. Transaction id\n")
     value = input("Enter new value: ")
     container.edit(id, attr, value)
-
-
-def _undo(container):
-    container.undo()
-
-
-def _redo(container):
-    container.redo()
 
 
 

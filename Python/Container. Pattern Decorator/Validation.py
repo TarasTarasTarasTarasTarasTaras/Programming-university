@@ -1,5 +1,5 @@
 import re
-from datetime import *
+from datetime import date
 
 class ExceptionPayment(Exception) : 
     def __init__(self, message: str = ''):
@@ -100,18 +100,6 @@ class Validation:
                 raise ValueError("  The year cannot be less than 1980 and more than 2021")
             function(*args, **kwargs)
         return decorator
-
-
-    @staticmethod
-    def validate_two_dates(date1, date2):
-        [d1, m1, y1] = str(date1).split('.')
-        [d2, m2, y2] = str(date2).split('.')
-        day, month, year = int(d1), int(m1), int(y1)
-        _date1 = date(year, month, day)
-        day, month, year = int(d2), int(m2), int(y2)
-        _date2 = date(year, month, day)
-        if _date1 > _date2:
-            raise ExceptionPayment("'Due to date' can not be later than 'request to date'")
 
 
     @staticmethod

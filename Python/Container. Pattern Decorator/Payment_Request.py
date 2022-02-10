@@ -14,7 +14,6 @@ class PAYMENT_REQUEST:
             self.set_transaction_id(transaction_id)
             self.set_payment_due_to_date(payment_due_to_date)
             self.set_payment_request_date(payment_request_date)
-            Validation.validate_two_dates(self.payment_due_to_date, self.payment_request_date)
         except ExceptionPayment as message:
             raise ValueError(str(message) + "\nError creating object")
 
@@ -72,3 +71,4 @@ class PAYMENT_REQUEST:
             if local_attr.startswith("get_") and callable(getattr(self, local_attr)):
                 array_of_getters.append(local_attr)
         return array_of_getters
+

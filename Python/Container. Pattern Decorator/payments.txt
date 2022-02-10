@@ -31,18 +31,10 @@ payment_due_to_date: 10.09.2020
 payment_request_date: 15.10.2020
 ========================
 id: 12345
-amount: 25000
-currency: usd
+amount: 15000
+currency: uah
 payer_email: jgngo32.gmail.com
 transaction_id: 54678219-47
 payment_due_to_date: 20.04.2021
 payment_request_date: 30.09.2021
-========================
-id: 123456
-amount: 30000
-currency: eur
-payer_email: ijn124ikjrf@gmail.com
-transaction_id: 45678987-52
-payment_due_to_date: 24.09.2020
-payment_request_date: 30.11.2021
 ========================
