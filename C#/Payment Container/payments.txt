@@ -1,0 +1,16 @@
+Id: 4f
+PayerEmail: qwerty@gmail.com
+Amount: 500ewq
+Currency: usd
+RequestDate: 01.01.1984
+DueToDate: 01.01.1978
+TransactionId: 12345678-02
+========
+Id: 12222f
+PayerEmail: qwert213y@lnu.edu.ua
+Amount: 500q
+Currency: usde
+RequestDate: 01.01.2021
+DueToDate: 01.01.2015
+TransactionId: 12345678-02
+========
